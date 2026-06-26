@@ -599,5 +599,55 @@
       modal.querySelector('.transform').classList.add('scale-95');
     }
   </script>
-</body>
+<!-- FOOTER SECTION (Legal & Compliance) -->
+  <footer class="w-full bg-slate-900 text-slate-400 px-4 sm:px-8 md:px-12 py-12 border-t border-slate-800">
+    <div class="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Left Side: Copyright Brand Statement -->
+      <div class="text-center md:text-left text-sm font-medium">
+        <p>&copy; 2026 Justin's OC Pool &amp; Spa. All Rights Reserved.</p>
+        <p class="text-xs text-slate-500 mt-1">Professional Pool Maintenance &amp; Equipment Diagnostic Services across Orange County.</p>
+      </div>
+
+      <!-- Right Side: Clean Compliance Links -->
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-bold uppercase tracking-wider">
+        <a href="#privacy-modal" onclick="openModal('privacy-modal')" class="hover:text-white transition-colors cursor-pointer">Privacy Policy</a>
+        <a href="#contact" class="hover:text-white transition-colors">Support</a>
+        
+        <!-- Future Socials / LLC Verification (Commented out for launch) -->
+        <!-- 
+        <span class="text-slate-700">|</span>
+        <a href="#" class="hover:text-white transition-colors">Yelp</a>
+        -->
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BASIC PRIVACY POLICY MODAL CONTAINER -->
+  <div id="privacy-modal" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 flex items-center justify-center p-4">
+    <div onclick="closeModal('privacy-modal')" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative z-10 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[80vh]">
+      <button onclick="closeModal('privacy-modal')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 font-bold text-xl cursor-pointer p-2">✕</button>
+      
+      <div class="mb-4">
+        <span class="text-xs font-extrabold tracking-widest text-blue-600 uppercase">Legal Compliance</span>
+        <h3 class="text-2xl font-black text-slate-900 mt-1">Privacy Policy</h3>
+      </div>
+
+      <div class="space-y-4 text-slate-600 font-medium text-sm border-t border-slate-100 pt-4 leading-relaxed">
+        <p>At Justin's OC Pool &amp; Spa, your privacy is a priority. We collect your full name, email address, and phone number solely to evaluate your pool service request and contact you regarding estimated quotes or schedule bookings.</p>
+        <p><strong class="text-slate-900 font-bold">Data Sharing:</strong> We do not sell, rent, lease, or distribute your private contact details to any third-party marketing firms or external platforms.</p>
+        <p><strong class="text-slate-900 font-bold">Security:</strong> Your submission data is routed securely through encrypted connection layers directly to our internal operational lead tracking database.</p>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-100 text-right">
+        <button onclick="closeModal('privacy-modal')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider py-3 px-6 rounded-xl shadow-md transition-all cursor-pointer">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+    
+    </body>
 </html>
