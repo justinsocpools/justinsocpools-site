@@ -336,7 +336,16 @@
         <div class="lg:col-span-7">
           <div class="bg-slate-50 border border-slate-100 rounded-3xl p-6 sm:p-10 shadow-xl">
             <!-- Form Action URL will go inside the action="" attribute below later -->
-            <form action="#" method="POST" class="space-y-6">
+            <!-- Form Action URL pointed to Web3Forms Endpoint -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+              
+              <!-- Hidden Web3Forms Setup Fields -->
+              <input type="hidden" name="access_key" value="ac653012-0439-47a8-975b-06c126f00361">
+              <!-- Redirects user back to your site homepage automatically after a submission -->
+              <input type="hidden" name="redirect" value="https://justinsocpools.com/">
+              <!-- Sets the email subject title Justin sees in his inbox -->
+              <input type="hidden" name="from_name" value="Justin's OC Pool Website">
+              <input type="hidden" name="subject" value="New High-Value Pool Route Lead Found!">
               
               <!-- Row 1: Name Input -->
               <div>
