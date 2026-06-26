@@ -427,6 +427,20 @@
 
     </div>
   </div>
+<script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('invisible', 'opacity-0');
+      modal.querySelector('.transform').classList.remove('scale-95');
+      modal.querySelector('.transform').classList.add('scale-100');
+    }
 
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.add('invisible', 'opacity-0');
+      modal.querySelector('.transform').classList.remove('scale-100');
+      modal.querySelector('.transform').classList.add('scale-95');
+    }
+  </script>
 </body>
 </html>
