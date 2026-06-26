@@ -12,17 +12,28 @@
 
   <!-- STICKY HEADER (Inspired by Aqua Masters premium layout) -->
 <!-- STICKY HEADER (Updated with Custom Logo) -->
+<!-- STICKY HEADER (With Navigation Layout) -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all">
     <div class="w-full px-4 sm:px-8 md:px-12 h-24 flex items-center justify-between">
       
-<!-- Brand Logo Area (Optimized Size) -->
-      <a href="#" class="flex items-center py-1">
+      <!-- Brand Logo Area -->
+      <a href="#" class="flex items-center h-full py-2">
         <img 
           src="/assets/images/logo.png" 
           alt="Justin's OC Pool & Spa Logo" 
           class="h-20 sm:h-24 md:h-28 w-auto object-contain transition-transform duration-150 active:scale-95"
         >
       </a>
+
+      <!-- Center Navigation Links (Hidden on Mobile, Visible on Desktop) -->
+      <nav class="hidden lg:flex items-center space-x-8 font-bold text-sm tracking-wide uppercase text-slate-600">
+        <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
+        <a href="#service-area" class="hover:text-blue-600 transition-colors">Service Area</a>
+        <!-- Future Pages Placeholder Links -->
+        <!-- <a href="/repairs.html" class="hover:text-blue-600 transition-colors">Repairs</a> -->
+        <!-- <a href="/reviews.html" class="hover:text-blue-600 transition-colors">Reviews</a> -->
+        <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
+      </nav>
 
       <!-- Direct Actions -->
       <div class="flex items-center space-x-4">
