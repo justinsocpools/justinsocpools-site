@@ -183,10 +183,12 @@
           </span>
         </button>
 
-        <!-- Service 2: Spa & Hot Tub Care -->
-        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+        <!-- Service 2: Maintenance -->
+        <button 
+          onclick="openModal('maintenance-modal')" 
+          class="w-full text-left bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-xl transition-all duration-300 group cursor-pointer block focus:outline-none focus:ring-2 focus:ring-blue-600/20"
+        >
           <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center text-blue-600 font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-            <!-- Hot Tub Waves Icon -->
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 .414-.336.75-.75.75H4.5a.75.75 0 01-.75-.75v-4.25m16.5 0a3 3 0 00-3-3H6.75a3 3 0 00-3 3m16.5 0h-16.5M12 3v3m-3.75-1.5v1.5m7.5-1.5v1.5"/>
             </svg>
@@ -198,12 +200,14 @@
           <span class="text-xs font-bold text-blue-600 tracking-wider uppercase group-hover:text-blue-700 flex items-center gap-1">
             See What's Included &rarr;
           </span>
-        </div>
+        </button>
 
         <!-- Service 3: Equipment & Diagnostics -->
-        <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+        <button 
+          onclick="openModal('equipment-modal')" 
+          class="w-full text-left bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-blue-200 hover:bg-white hover:shadow-xl transition-all duration-300 group cursor-pointer block focus:outline-none focus:ring-2 focus:ring-blue-600/20"
+        >
           <div class="w-12 h-12 bg-blue-600/10 rounded-xl flex items-center justify-center text-blue-600 font-bold text-xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-            <!-- Wrench/Tools Icon -->
             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
               <circle cx="12" cy="12" r="3"/>
@@ -211,11 +215,12 @@
           </div>
           <h3 class="text-xl font-bold text-slate-900 mb-3">Equipment Diagnostics</h3>
           <p class="text-slate-600 text-sm leading-relaxed mb-6">
-          Your pool’s equipment is the engine that keeps it running smoothly. Whether it’s a pump, filter, or heater, every component is a cornerstone part of maintaining water clarity, temperature, and overall functionality. We specialize in professional pool equipment repair and maintenance in Hillsborough, NJ, to keep your pool operating at its best.          </p>
+            Your pool’s equipment is the engine that keeps it running smoothly. Whether it’s a pump, filter, or heater, every component is a cornerstone of maintaining water clarity. We specialize in expert diagnostics to keep your system operating at peak efficiency.
+          </p>
           <span class="text-xs font-bold text-blue-600 tracking-wider uppercase group-hover:text-blue-700 flex items-center gap-1">
             See What's Included &rarr;
           </span>
-        </div>
+        </button>
 
       </div>
     </div>
@@ -432,6 +437,144 @@
 
     </div>
   </div>
+<!-- POOL & SPA MAINTENANCE MODAL CONTAINER -->
+  <div id="maintenance-modal" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 flex items-center justify-center p-4">
+    <!-- Backdrop Overlay -->
+    <div onclick="closeModal('maintenance-modal')" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+    
+    <!-- Modal Content Box -->
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-10 shadow-2xl relative z-10 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh]">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal('maintenance-modal')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 font-bold text-xl cursor-pointer p-2">✕</button>
+      
+      <!-- Header -->
+      <div class="mb-6">
+        <span class="text-xs font-extrabold tracking-widest text-blue-600 uppercase">Service Deep Dive</span>
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Pool &amp; Spa Maintenance</h3>
+        <p class="text-slate-500 font-medium text-sm mt-2">Each maintenance visit focuses on evaluating water quality, identifying issues, and ensuring your equipment is functioning properly.</p>
+      </div>
+
+      <!-- Checklist Grid -->
+      <ul class="space-y-3.5 border-t border-slate-100 pt-6 mb-6">
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Full water chemistry testing with detailed reporting</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Evaluation of heater, filter, and pool equipment</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Identification of potential repair needs</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Recommendations for system optimization</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Filter cleaning and system checks as needed</span>
+        </li>
+      </ul>
+
+      <!-- Post-Visit Report Highlight Box -->
+      <div class="bg-blue-50/60 border border-blue-100 rounded-2xl p-4 flex items-start gap-3">
+        <div class="text-blue-600 mt-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+          <strong class="text-slate-900 font-bold">After each visit:</strong> Clients receive a comprehensive digital report outlining all diagnostic findings and any recommended next steps.
+        </p>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span class="text-xs font-bold text-slate-400">Complete Diagnostic Oversight</span>
+        <a href="#contact" onclick="closeModal('maintenance-modal')" class="w-full sm:w-auto text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl shadow-md transition-all">
+          Book This Service
+        </a>
+      </div>
+    </div>
+  </div>
+<div id="equipment-modal" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 flex items-center justify-center p-4">
+    <div onclick="closeModal('equipment-modal')" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+    
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-10 shadow-2xl relative z-10 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh]">
+      
+      <button onclick="closeModal('equipment-modal')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 font-bold text-xl cursor-pointer p-2">✕</button>
+      
+      <div class="mb-6">
+        <span class="text-xs font-extrabold tracking-widest text-blue-600 uppercase">Service Deep Dive</span>
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Equipment Diagnostics</h3>
+        <p class="text-slate-500 font-medium text-sm mt-2">Pool equipment issues can develop gradually, making it difficult to spot problems early.</p>
+      </div>
+
+      <div class="space-y-6 border-t border-slate-100 pt-6">
+        
+        <div>
+          <h4 class="text-base font-bold text-slate-900 mb-3">Signs Your Pool Equipment Needs Attention:</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+              <span class="flex-shrink-0 w-5 h-5 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center text-xs font-bold">!</span>
+              <span><strong class="text-slate-900 font-bold">Noisy Pumps:</strong> Unusual sounds like grinding or squealing indicate that internal components may be damaged or worn.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+              <span class="flex-shrink-0 w-5 h-5 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center text-xs font-bold">!</span>
+              <span><strong class="text-slate-900 font-bold">Weak Water Flow:</strong> If water circulation is inconsistent, your pool’s filtration system may be underperforming.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+              <span class="flex-shrink-0 w-5 h-5 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center text-xs font-bold">!</span>
+              <span><strong class="text-slate-900 font-bold">Temperature Inconsistencies:</strong> A malfunctioning pool heater can lead to uneven water temperatures, affecting comfort.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+              <span class="flex-shrink-0 w-5 h-5 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center text-xs font-bold">!</span>
+              <span><strong class="text-slate-900 font-bold">Higher Energy Bills:</strong> Equipment that isn’t operating efficiently often consumes more energy, increasing utility costs.</span>
+            </li>
+          </ul>
+        </div>
+
+        <hr class="border-slate-100">
+
+        <div>
+          <h4 class="text-base font-bold text-slate-900 mb-3">Systems We Repair &amp; Maintain:</h4>
+          <p class="text-slate-500 text-xs font-medium mb-4">At Justin's OC Pool &amp; Spa, we handle a wide range of hardware, ensuring all components work together seamlessly:</p>
+          
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+              <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+              <span><strong class="text-slate-900 font-bold">Pumps:</strong> From repairing impellers to replacing motors, we keep your pump running efficiently.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+              <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+              <span><strong class="text-slate-900 font-bold">Filters:</strong> We clean, repair, and replace sand, cartridge, and DE filters to maintain perfect water clarity.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+              <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+              <span><strong class="text-slate-900 font-bold">Heaters:</strong> Expert troubleshooting for common issues like ignition failure and thermostat malfunctions.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+              <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+              <span><strong class="text-slate-900 font-bold">Chlorinators &amp; Salt Systems:</strong> Complete diagnostics on sanitizer cells to manage chemical consistency.</span>
+            </li>
+            <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+              <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+              <span><strong class="text-slate-900 font-bold">Automatic Cleaners:</strong> Maintenance on robotic and suction-based vacuums to keep the pool debris-free.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span class="text-xs font-bold text-slate-400">Professional Equipment Solutions</span>
+        <a href="#contact" onclick="closeModal('equipment-modal')" class="w-full sm:w-auto text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl shadow-md transition-all">
+          Book This Service
+        </a>
+      </div>
 <script>
     function openModal(id) {
       const modal = document.getElementById(id);
