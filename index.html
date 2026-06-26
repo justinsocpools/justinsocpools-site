@@ -366,5 +366,67 @@
       </div>
     </div>
   </section>
+
+<!-- WEEKLY MAINTENANCE MODAL CONTAINER -->
+  <div id="weekly-modal" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 flex items-center justify-center p-4">
+    <!-- Backdrop Blur Blur Overlay -->
+    <div onclick="closeModal('weekly-modal')" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+    
+    <!-- Modal Content Box -->
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-10 shadow-2xl relative z-10 transform scale-95 transition-transform duration-300 overflow-y-auto max-h-[90vh]">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal('weekly-modal')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600 font-bold text-xl cursor-pointer p-2">✕</button>
+      
+      <!-- Header -->
+      <div class="mb-6">
+        <span class="text-xs font-extrabold tracking-widest text-blue-600 uppercase">Service Deep Dive</span>
+        <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">Weekly Pool Cleaning</h3>
+        <p class="text-slate-500 font-medium text-sm mt-2">Each visit is meticulously engineered to maintain water clarity, protect your equipment, and prevent long-term issues.</p>
+      </div>
+
+      <!-- Checklist Grid -->
+      <ul class="space-y-3.5 border-t border-slate-100 pt-6">
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Test water chemistry to maintain proper LSI balance</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Add necessary sanitizer and balancing chemicals</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Remove leaves, debris, and surface contaminants</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Empty skimmer and pool pump baskets</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Brush steps, bench seating, walls, and tile lines</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Vacuum pool floor as needed based on debris load</span>
+        </li>
+        <li class="flex items-start gap-3 text-slate-700 font-semibold text-sm">
+          <span class="flex-shrink-0 w-5 h-5 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
+          <span>Inspect operational equipment performance &amp; pressure gauges</span>
+        </li>
+      </ul>
+
+      <!-- Action Footer -->
+      <div class="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span class="text-xs font-bold text-slate-400">Consistent Weekly Routing Schedules</span>
+        <a href="#contact" onclick="closeModal('weekly-modal')" class="w-full sm:w-auto text-center bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl shadow-md transition-all">
+          Book This Service
+        </a>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
