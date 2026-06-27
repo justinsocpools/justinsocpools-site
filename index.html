@@ -602,7 +602,8 @@
       modal.querySelector('.transform').classList.add('scale-95');
     }
   </script>
-<!-- FOOTER SECTION (Legal & Compliance) -->
+
+  <!-- FOOTER SECTION (Legal & Compliance) -->
   <footer class="w-full bg-slate-900 text-slate-400 px-4 sm:px-8 md:px-12 py-12 border-t border-slate-800">
     <div class="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-6">
       
@@ -616,12 +617,6 @@
       <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-bold uppercase tracking-wider">
         <a href="#privacy-modal" onclick="openModal('privacy-modal')" class="hover:text-white transition-colors cursor-pointer">Privacy Policy</a>
         <a href="#contact" class="hover:text-white transition-colors">Support</a>
-        
-        <!-- Future Socials / LLC Verification (Commented out for launch) -->
-        <!-- 
-        <span class="text-slate-700">|</span>
-        <a href="#" class="hover:text-white transition-colors">Yelp</a>
-        -->
       </div>
 
     </div>
@@ -638,13 +633,8 @@
         <h3 class="text-2xl font-black text-slate-900 mt-1">Privacy Policy</h3>
       </div>
 
+      <!-- Single, Comprehensive Privacy Text Box -->
       <div class="space-y-4 text-slate-600 font-medium text-sm border-t border-slate-100 pt-4 leading-relaxed">
-        <p>At Justin's OC Pool &amp; Spa, your privacy is a priority. We collect your full name, email address, and phone number solely to evaluate your pool service request and contact you regarding estimated quotes or schedule bookings.</p>
-        <p><strong class="text-slate-900 font-bold">Data Sharing:</strong> We do not sell, rent, lease, or distribute your private contact details to any third-party marketing firms or external platforms.</p>
-        <p><strong class="text-slate-900 font-bold">Security:</strong> Your submission data is routed securely through encrypted connection layers directly to our internal operational lead tracking database.</p>
-      </div>
-
-<div class="space-y-4 text-slate-600 font-medium text-sm border-t border-slate-100 pt-4 leading-relaxed">
         <p>
           Effective Date: June 26, 2026
         </p>
@@ -677,8 +667,17 @@
           <p>If you ever want to update your contact information or request that we completely purge your address or contact info from our local records, simply text or call us directly at (714) 931-6879.</p>
         </div>
       </div>
+
+      <!-- Action Button Footer -->
+      <div class="mt-6 pt-4 border-t border-slate-100 text-right">
+        <button onclick="closeModal('privacy-modal')" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider py-3 px-6 rounded-xl shadow-md transition-all cursor-pointer">
+          Close Window
+        </button>
+      </div>
+
     </div>
   </div>
     
-    </body>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"f15c562f394f49338a5ab999fafbd32b","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
 </html>
